@@ -10,6 +10,8 @@
         <item name="colorPrimaryDark">@color/colorAccent</item>
         <!--代表各个空间的基调颜色 CheckBox、RadioButton、progressbar等等-->
         <item name="colorAccent">@color/colorAccent</item>
+        <!--api 21 以上可以，设置底部虚拟导航栏背景颜色 5.x新特新-->
+        <item name="android:navigationBarColor">@color/colorAccent</item>
     </style>
 
 </resources>

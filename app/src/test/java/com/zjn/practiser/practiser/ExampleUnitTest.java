@@ -1,4 +1,4 @@
-package practiser.zjn.com.practiser;
+package com.zjn.practiser;
 
 import org.junit.Test;
 
