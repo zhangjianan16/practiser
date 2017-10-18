@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--分割线-->
+    <group android:id="@+id/g1">
+    <item
+        android:id="@+id/video"
+        android:icon="@drawable/vector_video_gray24dp"
+        android:title="视频"/>
+    </group>
+    <group android:id="@+id/g2">
+    <item
+        android:id="@+id/live_broadcast"
+        android:icon="@drawable/vector_video_gray24dp"
+        android:title="直播"/>
+    </group>
+    <group android:id="@+id/g3">
+    <item
+        android:id="@+id/music"
+        android:icon="@drawable/vector_music_gray_24dp"
+        android:title="音乐"/>
+    </group>
+    <group android:id="@+id/g4">
+    <item
+        android:id="@+id/satin"
+        android:icon="@drawable/vector_music_gray_24dp"
+        android:title="段子"/>
+    </group>
+    <group android:id="@+id/g5"
+        >
+    <item
+        android:id="@+id/journalism"
+        android:icon="@drawable/vector_music_gray_24dp"
+        android:title="新闻"/>
+    </group>
+</menu>

@@ -10,6 +10,9 @@ import android.view.Window;
 
 import com.zjn.practiser.adapter.MainRecycleViewAdapter;
 import com.zjn.practiser.databinding.ActivityMainBinding;
+import com.zjn.practiser.databinding.HeaderLayoutBinding;
+import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
+import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,7 +24,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 继承AppCompatActivity去掉titlebar的方法
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.drawerlayout.addDrawerListener(new MyDrawerLayoutLitstener());
         init();
+        initNavigationView();
+    }
+
+    /**
+     * 初始化侧滑栏菜单
+     */
+    private void initNavigationView() {
+        // 解决图片都是灰色
+        binding.navigationView.setItemIconTintList(null);
+        //获取头布局文件
+        View headerView = binding.navigationView.getHeaderView(0);
+        // 获取头布局
+        HeaderLayoutBinding bind = DataBindingUtil.bind(headerView);
+        // 头部局imageview点击事件
+        bind.iv.setOnClickListener(this);
+        // 菜单选择监听器
+        binding.navigationView.setNavigationItemSelectedListener(new MyNavigationItemSelectedListener(this));
     }
 
     private void init() {
@@ -39,18 +60,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         binding.recyclerview.setAdapter(mainRecycleViewAdapter);
         binding.ivLiftTouch.setOnClickListener(this);
-        binding.ivHeader.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_lift_touch:
-                //打开左侧侧滑栏
+                // 打开左侧侧滑栏
                 binding.drawerlayout.openDrawer(GravityCompat.START);
                 break;
-            case R.id.iv_header:
-                //关闭左侧侧滑栏
+            case R.id.iv:
+                // 关闭左侧侧滑栏
                 binding.drawerlayout.closeDrawer(GravityCompat.START);
                 break;
             default:

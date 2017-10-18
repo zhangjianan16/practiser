@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
     <android.support.v4.widget.DrawerLayout
@@ -17,8 +18,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:gravity="center_vertical"
                 android:background="@color/colorAccent"
+                android:gravity="center_vertical"
                 >
 
                 <ImageView
@@ -38,23 +39,20 @@
                 />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_left"
-            android:layout_width="match_parent"
+        <!--1.app:itemBackground="@color/colorAccent"设置每一个item的背景颜色
+            2.app:itemTextColor=""设置item的文字颜色
+            3.app:headerLayout="@layout/header_layout"头布局
+            4.app:menu="@menu/main"下面的菜单
+        -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:background="@android:color/white"
-            android:orientation="vertical"
-            >
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/header_layout"
+            app:menu="@menu/main">
 
-            <ImageView
-                android:id="@+id/iv_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@drawable/update"/>
-
-        </LinearLayout>
+        </android.support.design.widget.NavigationView>
     </android.support.v4.widget.DrawerLayout>
 </layout>
