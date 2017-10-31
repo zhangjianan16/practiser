@@ -15,7 +15,7 @@ import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
 import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private  final   String TAG="Observable";
     public ActivityMainBinding binding;
 
     @Override
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.drawerlayout.addDrawerListener(new MyDrawerLayoutLitstener());
         init();
         initNavigationView();
-    }
 
+    }
     /**
      * 初始化侧滑栏菜单
      */
