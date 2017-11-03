@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Practiser</string>
     <string-array name="functions">
-        <item>瀑布流</item>
-        <item>敬请期待</item>
+        <item>recycleview使用</item>
+        <item>雷达动画</item>
         <item>敬请期待</item>
         <item>敬请期待</item>
         <item>敬请期待</item>

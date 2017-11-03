@@ -12,6 +12,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!--api 21 以上可以，设置底部虚拟导航栏背景颜色 5.x新特新-->
         <item name="android:navigationBarColor">@color/colorAccent</item>
+        <!--替换listview的下划线-->
+        <item name="android:listDivider">@drawable/divider</item>
     </style>
 
 </resources>

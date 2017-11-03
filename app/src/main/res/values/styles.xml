@@ -10,6 +10,8 @@
         <item name="colorPrimaryDark">@color/colorAccent</item>
         <!--代表各个空间的基调颜色 CheckBox、RadioButton、progressbar等等-->
         <item name="colorAccent">@color/colorAccent</item>
+        <!--替换listview的下划线-->
+        <item name="android:listDivider">@drawable/divider</item>
     </style>
 
 </resources>

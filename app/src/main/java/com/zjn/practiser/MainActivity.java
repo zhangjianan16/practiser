@@ -1,5 +1,6 @@
 package com.zjn.practiser;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,8 @@ import com.zjn.practiser.databinding.ActivityMainBinding;
 import com.zjn.practiser.databinding.HeaderLayoutBinding;
 import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
 import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
+import com.zjn.practiser.ui.PinterestActivity;
+import com.zjn.practiser.ui.ScaleAlphaAnimationActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private  final   String TAG="Observable";
@@ -60,6 +63,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         binding.recyclerview.setAdapter(mainRecycleViewAdapter);
         binding.ivLiftTouch.setOnClickListener(this);
+        mainRecycleViewAdapter.setOnItemClickListener(new MainRecycleViewAdapter.OnItemClickListener() {
+            @Override
+            public void onclick(int position, View view) {
+                switch (position) {
+                    case 0:
+                        startActivity(new Intent(MainActivity.this, PinterestActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, ScaleAlphaAnimationActivity.class));
+                        break;
+                    default:
+                }
+
+            }
+        });
 
     }
 
