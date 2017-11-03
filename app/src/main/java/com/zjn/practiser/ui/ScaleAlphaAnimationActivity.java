@@ -1,6 +1,7 @@
 package com.zjn.practiser.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -39,6 +40,7 @@ public class ScaleAlphaAnimationActivity extends Activity  {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 mAnimationToX= progress*10;
                 mAnimationToY= progress*10;
+                initAnimotion();
             }
 
             @Override
@@ -82,6 +84,6 @@ public class ScaleAlphaAnimationActivity extends Activity  {
         binding.ivCircle.startAnimation(set);
     }
     public  void  startAnimotion(View view){
-        initAnimotion();
+    startActivity(new Intent(this,CircleWaveDivergenceViewActivity.class));
     }
 }
