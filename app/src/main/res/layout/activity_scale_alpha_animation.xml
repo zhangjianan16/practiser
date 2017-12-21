@@ -29,7 +29,7 @@
         android:background="@drawable/btn_bg"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="雷达效果(重新开始)"
+        android:text="雷达扫描效果"
         android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:onClick="startAnimotion"

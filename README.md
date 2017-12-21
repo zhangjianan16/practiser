@@ -4,3 +4,5 @@
 ## 2.recycleview的使用<br>
 ## 3.cardview的使用<br>
 ## 4.navigationView配合DrawerLayout实现侧滑栏的使用<br>
+## 5.添加雷达扫描动画效果<br>
+## 6.添加判断app是否进入后台的监听，适用于广告，密码弹出等<br>
