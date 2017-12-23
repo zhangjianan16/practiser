@@ -21,6 +21,7 @@
         <activity android:name=".ui.PinterestActivity"/>
         <activity android:name=".ui.ScaleAlphaAnimationActivity"/>
         <activity android:name=".ui.CircleWaveDivergenceViewActivity"/>
+        <activity android:name=".ui.RecycleViewActivity"/>
     </application>
 
 </manifest>
