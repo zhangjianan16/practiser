@@ -132,4 +132,5 @@ public class PinterestActivity extends Activity {
     public void add(View view){
         dividerAdapter.addData(1);
     }
+
 }

@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <com.coorchice.library.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="渐变"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:corner="5dp"
+        android:onClick="showSnackBar"
+        android:clickable="true"
+        app:shaderEnable="true"
+        app:shaderStartColor="@color/blue"
+         app:shaderEndColor="@color/pink"
+        app:shaderMode="rightToLeft"
+        />
+
+
+</LinearLayout>
