@@ -13,5 +13,19 @@
         <!--替换listview的下划线-->
         <item name="android:listDivider">@drawable/divider</item>
     </style>
+    <style name="SeachViewActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--主色-->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <!--主色 深色 一般用于状态栏颜色，底部导航栏-->
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <!--代表各个空间的基调颜色 CheckBox、RadioButton、progressbar等等-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--toolbar菜单项图标的颜色-->
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
 
+    作者：chaychan
+    链接：https://www.jianshu.com/p/16f9e995e454
+    來源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 </resources>

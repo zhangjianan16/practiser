@@ -22,7 +22,9 @@
         <activity android:name=".ui.ScaleAlphaAnimationActivity"/>
         <activity android:name=".ui.CircleWaveDivergenceViewActivity"/>
         <activity android:name=".ui.RecycleViewActivity"/>
-        <activity android:name=".ui.MySuperTextViewActivity"/>
+        <activity android:name=".ui.MySuperTextViewActivity"
+            android:theme="@style/SeachViewActivityTheme"
+            />
     </application>
 
 </manifest>
