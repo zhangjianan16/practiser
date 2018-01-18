@@ -36,6 +36,14 @@ public class MySuperTextViewActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
+        // 设置navigation点击事件监听
+        //   app:navigationIcon="@mipmap/ic_back"
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         textInputLayout = (TextInputLayout) findViewById(R.id.til_name);
         textInputLayout.getEditText().addTextChangedListener(new MyTextChangeLetenner(textInputLayout,"长度超过6位数"));
         //开启计数

@@ -18,6 +18,7 @@ import com.zjn.practiser.ui.MySuperTextViewActivity;
 import com.zjn.practiser.ui.PinterestActivity;
 import com.zjn.practiser.ui.RecycleViewActivity;
 import com.zjn.practiser.ui.ScaleAlphaAnimationActivity;
+import com.zjn.practiser.ui.TooBarDemo;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private  final   String TAG="Observable";
@@ -80,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 3:
                         startActivity(new Intent(MainActivity.this, MySuperTextViewActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, TooBarDemo.class));
                         break;
                     default:
                 }

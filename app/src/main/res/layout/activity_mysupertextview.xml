@@ -11,8 +11,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:title="登录"
+    app:titleTextColor="@color/white"
+    app:subtitle="子标题"
     android:id="@+id/toolbar"
+    app:logo="@mipmap/ic_launcher"
     app:navigationIcon="@mipmap/ic_back"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
     />
 
     <android.support.design.widget.TextInputLayout
