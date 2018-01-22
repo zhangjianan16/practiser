@@ -34,6 +34,8 @@ public class TooBarDemo extends AppCompatActivity implements TranlucentListener{
 
     @Override
     public void setTranlucentListener(float alpha) {
+        //   android:clipChildren="false"//子控件是否不能超出padding的区域（比如scroollview 上滑动的时候，child可以滑出该区域）
+        // android:clipToPadding="false" 改控件的绘制范围是否不在padding里面。 false绘制的时候范围会考虑padding值即会往里面缩进
         toolbar.setAlpha(alpha);
     }
 

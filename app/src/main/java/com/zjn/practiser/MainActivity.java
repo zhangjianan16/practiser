@@ -15,6 +15,7 @@ import com.zjn.practiser.databinding.HeaderLayoutBinding;
 import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
 import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
 import com.zjn.practiser.ui.MySuperTextViewActivity;
+import com.zjn.practiser.ui.PaletteDemo;
 import com.zjn.practiser.ui.PinterestActivity;
 import com.zjn.practiser.ui.RecycleViewActivity;
 import com.zjn.practiser.ui.ScaleAlphaAnimationActivity;
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, TooBarDemo.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, PaletteDemo.class));
                         break;
                     default:
                 }

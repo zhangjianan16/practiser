@@ -23,6 +23,7 @@
         <activity android:name=".ui.CircleWaveDivergenceViewActivity"/>
         <activity android:name=".ui.RecycleViewActivity"/>
         <activity android:name=".ui.TooBarDemo"/>
+        <activity android:name=".ui.PaletteDemo"/>
         <activity android:name=".ui.MySuperTextViewActivity"
             android:theme="@style/SeachViewActivityTheme"
             />
