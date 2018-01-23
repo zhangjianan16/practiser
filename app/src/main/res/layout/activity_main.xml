@@ -16,8 +16,11 @@
             >
 
             <LinearLayout
+                android:id="@+id/ll_titlebar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:clipToPadding="false"
                 android:background="@color/colorAccent"
                 android:gravity="center_vertical"
                 >

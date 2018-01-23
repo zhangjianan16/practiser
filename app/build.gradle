@@ -39,4 +39,5 @@ dependencies {
     compile 'com.android.support:design:24.0.0'
     compile 'com.github.chenBingX:SuperTextView:v1.4'
     compile 'com.android.support:palette-v7:26.0.0-alpha1'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
 }

@@ -1,14 +1,20 @@
 package com.zjn.practiser;
 
+import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.zjn.practiser.adapter.MainRecycleViewAdapter;
 import com.zjn.practiser.databinding.ActivityMainBinding;
 import com.zjn.practiser.databinding.HeaderLayoutBinding;
@@ -19,6 +25,7 @@ import com.zjn.practiser.ui.PaletteDemo;
 import com.zjn.practiser.ui.PinterestActivity;
 import com.zjn.practiser.ui.RecycleViewActivity;
 import com.zjn.practiser.ui.ScaleAlphaAnimationActivity;
+import com.zjn.practiser.ui.TabLayoutDemo;
 import com.zjn.practiser.ui.TooBarDemo;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,12 +37,64 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         // 继承AppCompatActivity去掉titlebar的方法
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+//        设置状态栏的透明属性
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //全屏
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setNavigationBarColor(getResources().getColor(R.color.setting_blue));
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.drawerlayout.addDrawerListener(new MyDrawerLayoutLitstener());
         init();
         initNavigationView();
-
+        //设置沉浸式
+        setSystemStatusBar(Color.TRANSPARENT);
     }
+    private final void setSystemStatusBar(int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {//4.4-5.0实现方式
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            setTranslucentStatus(true);
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintColor(color);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//5.0 全透明实现
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(color);
+        }
+    }
+    @TargetApi(19)
+    private void setTranslucentStatus(boolean on) {
+        Window win = getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
+    }
+    private int getStateBar(Context context) {
+        int dimensionPixelSize=-1;
+        try {
+            Class<?> aClass = Class.forName("com.android.internal.R$dimen");
+            Object o = aClass.newInstance();
+            String height = aClass.getField("status_bar_height").get(o).toString();
+            Integer integer = Integer.valueOf(height);
+             dimensionPixelSize = context.getResources().getDimensionPixelSize(integer);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return dimensionPixelSize;
+    }
+
     /**
      * 初始化侧滑栏菜单
      */
@@ -88,6 +147,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this, PaletteDemo.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, TabLayoutDemo.class));
                         break;
                     default:
                 }
