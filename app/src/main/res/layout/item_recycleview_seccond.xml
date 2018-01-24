@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:clickable="true"
+        app:cardElevation="10dp"
         app:cardPreventCornerOverlap="false"
         app:cardCornerRadius="2dp"
         android:stateListAnimator="@drawable/lift_on_touch"

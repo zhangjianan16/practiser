@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/ll_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -18,10 +18,10 @@
             <LinearLayout
                 android:id="@+id/ll_titlebar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:fitsSystemWindows="true"
-                android:clipToPadding="false"
+                android:layout_height="70dp"
                 android:background="@color/colorAccent"
+                android:clipToPadding="false"
+                android:fitsSystemWindows="true"
                 android:gravity="center_vertical"
                 >
 
@@ -39,9 +39,22 @@
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@id/ll_titlebar"
                 />
-
-        </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_actionbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add_white_24dp"
+                android:elevation="10dp"
+                app:rippleColor="@color/red"
+                app:pressedTranslationZ="10dp"
+                app:fabSize="normal"
+                android:clickable="true"
+                />
+        </RelativeLayout>
         <!--1.app:itemBackground="@color/colorAccent"设置每一个item的背景颜色
             2.app:itemTextColor=""设置item的文字颜色
             3.app:headerLayout="@layout/header_layout"头布局

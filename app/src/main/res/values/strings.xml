@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Practiser</string>
     <string-array name="functions">
-        <item>recycleview简单实用</item>
+        <item>recycleview+cardview简单实用</item>
         <item>仿水波纹中心扩散和雷达扫描效果</item>
         <item>recycleviewt拖拽动画</item>
         <item>SuperTextView的使用</item>

@@ -31,7 +31,6 @@
                 android:id="@+id/linear"
                 android:background="@color/white"
                 android:text="线性(带分割线)"
-                android:onClick="linear"
                 />
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="0dp"
@@ -40,7 +39,6 @@
                 android:id="@+id/gride"
                 android:background="@color/white"
                 android:text="表格(带分割线)"
-                android:onClick="gride"
                 />
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="0dp"
@@ -49,7 +47,6 @@
                 android:id="@+id/horizontal"
                 android:background="@color/white"
                 android:text="横向"
-                android:onClick="horizontal"
                 />
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="0dp"
@@ -58,7 +55,6 @@
                 android:id="@+id/add"
                 android:background="@color/white"
                 android:text="添加"
-                android:onClick="add"
                 />
         </LinearLayout>
     <android.support.v7.widget.RecyclerView

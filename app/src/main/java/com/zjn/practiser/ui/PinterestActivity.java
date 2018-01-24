@@ -24,7 +24,7 @@ import java.util.List;
  * Created by Marks zhang on 2017/10/31.
  */
 
-public class PinterestActivity extends Activity {
+public class PinterestActivity extends Activity implements View.OnClickListener {
 
     public List<String> list;
     public ActivityPinterestBinding binding;
@@ -63,6 +63,11 @@ public class PinterestActivity extends Activity {
             }
         });
         dividerItemDecoration = new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
+        binding.add.setOnClickListener(this);
+        binding.linear.setOnClickListener(this);
+        binding.pinterest.setOnClickListener(this);
+        binding.horizontal.setOnClickListener(this);
+        binding.gride.setOnClickListener(this);
     }
 
     /**
@@ -133,4 +138,18 @@ public class PinterestActivity extends Activity {
         dividerAdapter.addData(1);
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId()==R.id.add) {
+            add(v);
+        }else if (v.getId()==R.id.linear) {
+            linear(v);
+        }else if (v.getId()==R.id.pinterest) {
+            pinterest(v);
+        }else if (v.getId()==R.id.horizontal) {
+            horizontal(v);
+        }else if (v.getId()==R.id.gride) {
+            gride(v);
+        }
+    }
 }

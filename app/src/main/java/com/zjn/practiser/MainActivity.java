@@ -1,5 +1,6 @@
 package com.zjn.practiser;
 
+import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        getWindow().setNavigationBarColor(getResources().getColor(R.color.setting_blue));
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.drawerlayout.addDrawerListener(new MyDrawerLayoutLitstener());
+        binding.floatingActionbutton.setOnClickListener(this);
         init();
         initNavigationView();
         //设置沉浸式
@@ -159,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    private boolean reverse = false;
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -169,6 +172,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.iv:
                 // 关闭左侧侧滑栏
                 binding.drawerlayout.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.floating_actionbutton:
+                // 关闭左侧侧滑栏
+                float toDegree=reverse?-180f:180f;
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "rotation", 0.0f, toDegree).setDuration(400);
+                reverse=!reverse;
+                objectAnimator.start();
                 break;
             default:
         }
