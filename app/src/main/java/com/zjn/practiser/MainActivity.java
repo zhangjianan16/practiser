@@ -21,6 +21,7 @@ import com.zjn.practiser.databinding.ActivityMainBinding;
 import com.zjn.practiser.databinding.HeaderLayoutBinding;
 import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
 import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
+import com.zjn.practiser.ui.CoordinatorLayoutDemo;
 import com.zjn.practiser.ui.MySuperTextViewActivity;
 import com.zjn.practiser.ui.PaletteDemo;
 import com.zjn.practiser.ui.PinterestActivity;
@@ -152,6 +153,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 6:
                         startActivity(new Intent(MainActivity.this, TabLayoutDemo.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this, CoordinatorLayoutDemo.class));
                         break;
                     default:
                 }
