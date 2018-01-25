@@ -20,7 +20,7 @@ import com.zjn.practiser.databinding.ActivityScaleAlphaAnimationBinding;
  * Created by Marks zhang on 2017/11/3.
  */
 
-public class ScaleAlphaAnimationActivity extends Activity  {
+public class ScaleAlphaAnimationActivity extends Activity implements View.OnClickListener {
     private int mAnimationToX=10;
     private int mAnimationToY=10;
     public ActivityScaleAlphaAnimationBinding binding;
@@ -29,6 +29,7 @@ public class ScaleAlphaAnimationActivity extends Activity  {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_scale_alpha_animation);
+        binding.btn.setOnClickListener(this);
         initAnimotion();
         initSeekBar();
     }
@@ -85,5 +86,10 @@ public class ScaleAlphaAnimationActivity extends Activity  {
     }
     public  void  startAnimotion(View view){
     startActivity(new Intent(this,CircleWaveDivergenceViewActivity.class));
+    }
+
+    @Override
+    public void onClick(View v) {
+        startAnimotion(v);
     }
 }

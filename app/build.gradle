@@ -39,5 +39,7 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.github.chenBingX:SuperTextView:v1.4'
     compile 'com.android.support:palette-v7:26.0.0-alpha1'
+    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    compile 'com.android.support:percent:23.1.0'
 }

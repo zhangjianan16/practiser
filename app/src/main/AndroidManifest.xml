@@ -26,6 +26,9 @@
         <activity android:name=".ui.TooBarDemo"/>
         <activity android:name=".ui.PaletteDemo"/>
         <activity android:name=".ui.CoordinatorLayoutDemo"/>
+        <activity android:name=".ui.AppBarActivity"
+                  android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".ui.TabLayoutDemo"/>
         <activity android:name=".ui.MySuperTextViewActivity"
             android:theme="@style/SeachViewActivityTheme"
