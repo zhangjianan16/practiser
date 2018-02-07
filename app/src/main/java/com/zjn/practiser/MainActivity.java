@@ -22,6 +22,7 @@ import com.zjn.practiser.databinding.HeaderLayoutBinding;
 import com.zjn.practiser.listener.MyDrawerLayoutLitstener;
 import com.zjn.practiser.listener.MyNavigationItemSelectedListener;
 import com.zjn.practiser.ui.AppBarActivity;
+import com.zjn.practiser.ui.BehaviorDemo;
 import com.zjn.practiser.ui.CoordinatorLayoutDemo;
 import com.zjn.practiser.ui.MySuperTextViewActivity;
 import com.zjn.practiser.ui.PaletteDemo;
@@ -160,6 +161,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 8:
                         startActivity(new Intent(MainActivity.this, AppBarActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(MainActivity.this, BehaviorDemo.class));
                         break;
                     default:
                 }
