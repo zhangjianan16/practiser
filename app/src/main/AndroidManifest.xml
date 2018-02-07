@@ -27,6 +27,8 @@
         <activity android:name=".ui.PaletteDemo"/>
         <activity android:name=".ui.CoordinatorLayoutDemo"/>
         <activity android:name=".ui.BehaviorDemo"/>
+        <activity android:name=".ui.FirstActivity"/>
+        <activity android:name=".ui.SecondActivity"/>
         <activity android:name=".ui.AppBarActivity"
                   android:theme="@style/AppTheme.NoActionBar"
             />

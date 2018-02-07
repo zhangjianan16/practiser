@@ -14,6 +14,9 @@
         <item name="android:navigationBarColor">@color/colorAccent</item>
         <!--替换listview的下划线-->
         <item name="android:listDivider">@drawable/divider</item>
+        <!--开启转场动画-->
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
     <style name="SeachViewActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!--主色-->
