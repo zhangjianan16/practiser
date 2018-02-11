@@ -45,10 +45,9 @@
     <color name="green">#8BC385</color>
     <color name="light_green">#e4fcf9</color>
     <color name="dark_green">#23993B</color>
-
+    <color name="yellow">#ffff00</color>
+    <color name="pink">#e91e63</color>
     <color name="puple">#ECEBFF</color>
-    <color name="yellow">#F7F4DD</color>
-    <color name="pink">#FBE9EC</color>
     <color name="blue">#1DB8F1</color>
     <color name="divider_color">#e0e0e0</color>
     <color name="common_orange">#fc7946</color>

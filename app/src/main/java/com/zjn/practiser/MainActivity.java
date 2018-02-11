@@ -29,6 +29,7 @@ import com.zjn.practiser.ui.MySuperTextViewActivity;
 import com.zjn.practiser.ui.PaletteDemo;
 import com.zjn.practiser.ui.PinterestActivity;
 import com.zjn.practiser.ui.RecycleViewActivity;
+import com.zjn.practiser.ui.SVGPathAnimatorActivity;
 import com.zjn.practiser.ui.ScaleAlphaAnimationActivity;
 import com.zjn.practiser.ui.TabLayoutDemo;
 import com.zjn.practiser.ui.TooBarDemo;
@@ -168,6 +169,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 10:
                         startActivity(new Intent(MainActivity.this, FirstActivity.class));
+                        break;
+                    case 11:
+                        startActivity(new Intent(MainActivity.this, SVGPathAnimatorActivity.class));
                         break;
                     default:
                 }

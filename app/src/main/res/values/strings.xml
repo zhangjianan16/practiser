@@ -12,7 +12,7 @@
         <item>appbar效果</item>
         <item>自定义Behavior</item>
         <item>activity转场动画</item>
-        <item>敬请期待</item>
+        <item>SVG动画</item>
         <item>敬请期待</item>
         <item>敬请期待</item>
         <item>敬请期待</item>
@@ -30,4 +30,46 @@
     <string name="taeyeon_text">金泰妍（Taeyeon），1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。2008年为韩国KBS电视台电视剧《快刀洪吉童》演唱主题曲《如果》；同年12月凭借歌曲《听得见吗》获得第23届韩国金唱片大奖人气奖。2012年与黄美英、徐珠贤组成了少女时代的小分队组合“TaeTiSeo”。</string>
     <string name="yoona_text">林允儿（Yoona），1990年5月30日出生于韩国首尔，韩国女歌手、演员、主持人，女子演唱团体少女时代成员之一。2002年，林允儿被韩国SM娱乐有限公司发掘，正式进入SM公司成为旗下练习生。2007年8月5日以演唱团体少女时代正式出道。2008年在电视连续剧《你是我的命运》担任女主角，凭借该剧获得第45届百想艺术大赏最佳新人女演员奖。2009年参演电视剧《乞丐变王子》；同年凭借电视剧《你是我的命运》获得百想艺术大奖最佳新人女演员奖。</string>
     <string name="text_erro">长度过大</string>
+
+    <string name="example_from_documentation">Example from documentation</string>
+    <string name="rotation_only">Rotation only</string>
+    <string name="path_morph_only">Path morph only</string>
+    <string name="animate">Animate</string>
+
+    <string name="clock">Clock</string>
+
+    <string name="smiling_face">Smiling face</string>
+
+    <string name="fill_in_heart">Fill in heart</string>
+    <string name="love_it">Love it</string>
+
+    <string name="path_circle">
+    M 50,50
+    m -48,0
+    a 48,48 0 1,0 96,0
+    a 48,48 0 1,0 -96,0
+  </string>
+    <string name="path_face_left_eye">
+    M 35,40
+    m -7,0
+    a 7,7 0 1,0 14,0
+    a 7,7 0 1,0 -14,0
+  </string>
+    <string name="path_face_right_eye">
+    M 65,40
+    m -7,0
+    a 7,7 0 1,0 14,0
+    a 7,7 0 1,0 -14,0
+  </string>
+    <string name="path_face_mouth_sad">
+    M 30,75
+    Q 50,55 70,75
+  </string>
+    <string name="path_face_mouth_happy">
+    M 30,65
+    Q 50,85 70,65
+  </string>
+    <string name="heart">
+    M25.119,2.564c12.434,0.023,18.68,5.892,24.88,17.612  c6.2-11.721,12.446-17.589,24.877-17.612c13.81-0.025,25.035,10.575,25.061,23.66c0.033,23.708-24.952,47.46-49.938,71.212  C25.016,73.685,0.03,49.932,0.064,26.224C0.085,13.14,11.309,2.539,25.119,2.564z
+  </string>
 </resources>
