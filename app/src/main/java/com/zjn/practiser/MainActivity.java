@@ -27,6 +27,7 @@ import com.zjn.practiser.ui.CoordinatorLayoutDemo;
 import com.zjn.practiser.ui.FirstActivity;
 import com.zjn.practiser.ui.MySuperTextViewActivity;
 import com.zjn.practiser.ui.PaletteDemo;
+import com.zjn.practiser.ui.ParallaxContainerActivity;
 import com.zjn.practiser.ui.PinterestActivity;
 import com.zjn.practiser.ui.RecycleViewActivity;
 import com.zjn.practiser.ui.SVGPathAnimatorActivity;
@@ -172,6 +173,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 11:
                         startActivity(new Intent(MainActivity.this, SVGPathAnimatorActivity.class));
+                        break;
+                    case 12:
+                        startActivity(new Intent(MainActivity.this, ParallaxContainerActivity.class));
                         break;
                     default:
                 }

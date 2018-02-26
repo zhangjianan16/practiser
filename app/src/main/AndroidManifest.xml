@@ -30,6 +30,7 @@
         <activity android:name=".ui.FirstActivity"/>
         <activity android:name=".ui.SecondActivity"/>
         <activity android:name=".ui.SVGPathAnimatorActivity"/>
+        <activity android:name=".ui.ParallaxContainerActivity"/>
         <activity android:name=".ui.AppBarActivity"
                   android:theme="@style/AppTheme.NoActionBar"
             />

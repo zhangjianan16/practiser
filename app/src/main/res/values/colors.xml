@@ -21,7 +21,7 @@
     <!-- 公众号 -->
     <color name="color_publisher_bg">#ebebeb</color>
     <color name="color_publisher_id">#999999</color>
-
+    <color name="base_shallow_black">#818181</color>
     <color name="red">#EBFF064C</color>
     <color name="window_background">@color/bg_gray</color>
     <color name="text_color_deep">#333333</color>
