@@ -43,4 +43,16 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
     compile 'com.android.support:percent:23.1.0'
+    testCompile('org.powermock:powermock-api-mockito:1.6.2') {
+        exclude module: 'hamcrest-core'
+        exclude module: 'objenesis'
+    }
+    testCompile('org.powermock:powermock-module-junit4:1.6.2') {
+        exclude module: 'hamcrest-core'
+        exclude module: 'objenesis'
+    }
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+//    implementation files('libs/MPAndroidChart-v3.0.2.jar')
 }
